@@ -1,5 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-// didanurwanda.blogspot.com
+
 class Front extends CI_Controller {
 
 	public $user_management = "User Management";
@@ -1013,7 +1013,7 @@ class Front extends CI_Controller {
 	}
 	// basic directory
 	public function get_dir() {
-		return "/nufa/frontend/";
+		return "/frontend/";
 	}
 	// js directory
 	public function get_dir_js() {
@@ -1033,11 +1033,11 @@ class Front extends CI_Controller {
 	}
 	// upload directory
 	public function get_upload_path() {
-		return "/nufa/uploads/";
+		return "/uploads/";
 	}
 	// upload directory
 	public function get_dir_uploads_thumbs() {
-		return "/nufa/uploads/thumbs/thumb_";
+		return "/uploads/thumbs/thumb_";
 	}
 	
 }

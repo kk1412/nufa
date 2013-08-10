@@ -1,11 +1,3 @@
-<?php 
-  $dir="/nufa/frontend/";
-  $dir_css=$dir."css/";
-  $dir_js=$dir."js/";
-  $dir_images=$dir."images/";
-?>
-
-
   <!--///////////////////// BEGINNING footer ///////////////////-->
   
         <div id="quovolver-two" style="margin:-3.8% 0% 0%;text-align:center;"><!--beginning quovolver-->

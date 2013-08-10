@@ -1,9 +1,3 @@
-<?php 
-  $dir="/nufa/frontend/";
-  $dir_css=$dir."css/";
-  $dir_js=$dir."js/";
-  $dir_images=$dir."images/";
-?>
 <!--beginning "pageWrapper"--> 
 <div class="pageWrapper">
 
@@ -88,15 +82,15 @@
         <?php foreach($historys as $history): ?>
 	<div class="dept-dept-one"> <i class="symbol"><img src="<?=$dir_images?>dial_32x32_green.png" alt=""></i>
 		<h3><?php echo anchor("$controller/history","$history->name_content", array("class"=>"basic-link")); ?></h3>
-		<p><?php echo (strlen($history->desc_content) > 100)?substr($history->desc_content, 0, 100)."....":$history->desc_content;?></p>
+		<p><?php echo (strlen($history->desc_content) > 100)?substr($history->desc_content, 0, 100)."...":$history->desc_content;?></p>
 		<span class="more"><?php echo anchor("$controller/history","Read More"); ?></span>
 	</div>
         <?php endforeach; ?>
         <?php foreach($visionAndMissions as $visionAndMission): ?>
 	<div class="dept-dept-two"> <i class="symbol"><img src="<?=$dir_images?>dial_32x32_green.png" alt=""></i>
-		<h3><?php echo anchor("$controller/history","$visionAndMission->name_content", array("class"=>"basic-link")); ?></h3>
-		<p><?php echo (strlen($visionAndMission->desc_content) > 100)?substr($visionAndMission->desc_content, 0, 100)."....":$visionAndMission->desc_content;?></p>
-		<span class="more"><a href="#">Learn More</a></span>
+		<h3><?php echo anchor("$controller/visionAndMission","$visionAndMission->name_content", array("class"=>"basic-link")); ?></h3>
+		<p><?php echo (strlen($visionAndMission->desc_content) > 100)?substr($visionAndMission->desc_content, 0, 100)."...":$visionAndMission->desc_content;?></p>
+		<span class="more"><?php echo anchor("$controller/visionAndMission","Read More"); ?></span>
 	</div>
         <?php endforeach; ?>
       </div>
@@ -104,12 +98,12 @@
         <div class="dept-dept-three"> <i class="symbol"><img src="<?=$dir_images?>steering_wheel_32x32_green.png" alt=""></i>
           <h3><?php echo anchor("$controller/gallery","Gallery", array("class"=>"basic-link")); ?></h3>
           <p>Lihat gallery foto-foto narsis dan gokil guru serta murid sekolah SMPIT Nurul Fajar.</p>
-          <span class="more"><a href="#">Learn More</a></span>
+          <span class="more"><?php echo anchor("$controller/gallery","Read More"); ?></span>
         </div>
         <div class="dept-dept-four"> <i class="symbol"><img src="<?=$dir_images?>move_alt2_32x32_green.png" alt=""></i>
           <h3><?php echo anchor("$controller/contact","Contact Us", array("class"=>"basic-link")); ?></h3>
           <p>Hubungi kami jika ingin mendaftar sekolah, ada keluhan dan informasi yang mungkin anda butuhkan dan lain-lain.</p>
-          <span class="more"><a href="#">Learn More</a></span>
+          <span class="more"><?php echo anchor("$controller/contact","Read More"); ?></span>
         </div>
       </div>
     </section>

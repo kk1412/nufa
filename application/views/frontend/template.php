@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <?php 
-  $dir="/nufa/frontend/";
+  $dir="/frontend/";
   $dir_css=$dir."css/";
   $dir_js=$dir."js/";
   $dir_images=$dir."images/";
@@ -101,7 +101,7 @@
 
 
 <!--//////////////////// java script ///////////////////////////////////--> 
-<script type="text/javascript" src="../../../ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="<?=$dir_js?>jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="<?=$dir_js?>jquery-1.9.1.min.js"><\/script>')</script>
 <script type="text/javascript" src="<?=$dir_js?>jquery.dcflickr.1.0.js"></script><!--jquery.dcflickr.1.0-->
 <script type="text/javascript" src="<?=$dir_js?>script-flickr.js"></script><!--jscript-flickr--> 
@@ -251,9 +251,6 @@
 <!--end "nav_up nav_down-->
 
 <!--//////////////////// java script ///////////////////////////////////--> 
-<?/*<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="<?=$dir_js?>jquery.quovolver.js"></script><!--jquery.quovolver-->
-<script type="text/javascript" src="<?=$dir_js?>script-quovolver.js"></script><!--script-quovolver--> */?>
 
 <!--//////////////////// end java script ///////////////////////////////-->
 

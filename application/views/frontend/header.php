@@ -1,9 +1,4 @@
-<?php 
-  $dir="/nufa/frontend/";
-  $dir_css=$dir."css/";
-  $dir_js=$dir."js/";
-  $dir_images=$dir."images/";
-?><?=($this->uri->segment(2)=="index.do")?"selected":"" ?>
+<?=($this->uri->segment(2)=="index.do")?"selected":"" ?>
   <!--///////////////////// BEGINNING header /////////////////////////////-->
   
   <header><!--beginning header -->
@@ -22,7 +17,7 @@
                         <li> <a href="#" title="Google+" class="tooltip"> <img src="<?=$dir_images?>google-h.png" alt=""> </a> </li>
                         <li> <a href="#" title="Twitter" class="tooltip"> <img src="<?=$dir_images?>twitter-h.png" alt=""> </a> </li>
                         <li> <a href="#" title="Facebook" class="tooltip"> <img src="<?=$dir_images?>facebook-h.png" alt=""> </a> </li>
-                        <li> <a href="mailto:info@yourmail.com" title="Write mail" class="tooltip opac"> <img src="<?=$dir_images?>mail-h.png" alt=""> </a> </li>
+                        <li> <a href="mailto:hadi.arraafid@gmail.com" title="Write mail" class="tooltip opac"> <img src="<?=$dir_images?>mail-h.png" alt=""> </a> </li>
                         <li> <a href="#" title="Call with Skipe" class="tooltip opac"> <img src="<?=$dir_images?>skipe-h.png" alt=""> </a> </li>
                         
                     </ul>
