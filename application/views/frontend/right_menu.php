@@ -8,12 +8,18 @@
         <!--|||||||||||||||||||||||||||||BEGINNING SPOT-BLOG||||||||||||||||||||||||||||||-->
         
         <div class="spot-blog"><!--beginning spot-blog-->
-        
-        <form class="search-post" action="<?= base_url().$controller."/".$this->uri->segment(2)?>" method="get">
+        <?php
+		if($this->uri->segment(2) == "gallery" || $this->uri->segment(2) == "history" || $this->uri->segment(2) == "visionAndMision") {
+			$function = "archieves";
+		}
+		else {
+			$function = $this->uri->segment(2);
+		}
+        ?>
+        <form class="search-post" action="<?= base_url().$controller."/".$function?>" method="get">
         <fieldset> <span class="text"><input name="search" type="text" value="" placeholder="Search ..."></span>
         </fieldset>
         </form>
-        
           <h3 class="title-three-4"><span>Latest Post</span></h3>
           <ul>
 		<?php $link = ""; foreach($all_contents as $all_content):

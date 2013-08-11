@@ -126,6 +126,8 @@
 <script type="text/javascript" src="<?=$dir_js?>script-prettyPhoto-one.js"></script><!--script-prettyPhoto-one--> 
 <script type="text/javascript" src="<?=$dir_js?>jquery.nivo.slider.js"></script><!--jquery.nivo.slider-->
 <script type="text/javascript" src="<?=$dir_js?>picbox.js"></script><!-- picbox -->
+<script type="text/javascript" src="<?=$dir_js?>iview.js"></script><!--slide iview-->
+<script type="text/javascript" src="<?=$dir_js?>script-iview.js"></script><!--slide iview-->
 <?php
 	if($this->uri->segment(2) != "index"){
 ?>

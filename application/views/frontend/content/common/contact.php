@@ -1,138 +1,86 @@
-<div id="main">
-    <!-- Start H1 Title -->
-    <div class="titlesnormal">
+ 
+  <!--/////////////////////////BEGINNING contentWrapper///////////////////-->
+  
+  <div id="contentWrapper"><!--beginning contentWrapper-->
+    <h3 class="title-three-5"><span>Contact Us</span></h3>
+  
+    <!--/////////////////// BEGINNING MAPS/////////////////////// /////////////////-->
     
-    	<h1>contact response</h1>
-        
-        <span></span>
+    <div class="maps">
+      <figure class="google-maps">
+        <iframe width="940" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=&amp;daddr=SMPIT+Nurul+Fajar+%40-6.5430890522844525,106.72700643539429&amp;hl=en&amp;geocode=FQ8pnP8dXoZcBg&amp;aq=1&amp;oq=cangkr&amp;sll=-6.543782,106.731813&amp;sspn=0.00534,0.010504&amp;mra=ls&amp;ie=UTF8&amp;t=m&amp;ll=-6.543793,106.731813&amp;spn=0.007461,0.00912&amp;z=16&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=d&amp;source=embed&amp;saddr=&amp;daddr=SMPIT+Nurul+Fajar+%40-6.5430890522844525,106.72700643539429&amp;hl=en&amp;geocode=FQ8pnP8dXoZcBg&amp;aq=1&amp;oq=cangkr&amp;sll=-6.543782,106.731813&amp;sspn=0.00534,0.010504&amp;mra=ls&amp;ie=UTF8&amp;t=m&amp;ll=-6.543793,106.731813&amp;spn=0.007461,0.00912&amp;z=16" style="color:#0000FF;text-align:left"></a></small>
+      </figure>
+    </div>
     
+    <!--///////////////////// END MAPS/////////////////////////////////////////////-->
+    
+    <div class="content-send"><!--beginning content-send-->
+      <div id="send-email"><!--beginning send-email-->
+        <h3 class="title-three-4"><span>Send Us an Email</span></h3>
+        <form method="post" action=""  id="contact-form" class="form">
+                
+	  <?php
+		  if($this->session->userdata('is_login_front') == TRUE) {
+			  echo "<input type=\"hidden\" name=\"author_comment\" value=\"" . $this->session->userdata('full_name_front') . "\"/>";
+			  echo "<input type=\"hidden\" name=\"email_comment\" value=\"" . $this->session->userdata('email_front') . "\"/>";
+			  echo "<input type=\"hidden\" name=\"id_user\" value=\"" . $this->session->userdata('id_user_front'). "\"/>";
+		  }
+		  else {
+	  ?>
+          <p class="author_comment">
+            <label>Your name</label>
+            <br>
+            <input type="text" name="author_comment" id="name" required value="<?php echo (set_value('author_comment'))?set_value('author_comment'):""; ?>"/>
+            <?php if(form_error('author_comment') != null) echo "<span class=\"error-contact\"> " . form_error('author_comment') . " </span>"; ?>
+          </p>
+          <p class="email">
+            <label>Your email</label>
+            <br>
+            <input type="text" name="email_comment" id="name" required value="<?php echo (set_value('email_comment'))?set_value('email_comment'):""; ?>"/>
+            <?php if(form_error('email_comment') != null) echo "<span class=\"error-contact\"> " . form_error('email_comment') . " </span>"; ?>
+          </p>
+	  <?php
+		  }
+	  ?>
+          <p class="email">
+            <label>Your phone</label>
+            <br>
+            <input type="text" name="phone_comment" id="name" required value="<?php echo (set_value('phone_comment'))?set_value('phone_comment'):""; ?>"/>
+            <?php if(form_error('phone_comment') != null) echo "<span class=\"error-contact\"> " . form_error('phone_comment') . " </span>"; ?>
+          </p>
+          <p class="text">
+            <label>Your message</label>
+            <br>
+            <textarea id="comments" name="desc_comment" cols="5" rows="5" class="contacttextarea"><?php echo (set_value('desc_comment'))?set_value('desc_comment'):""; ?></textarea><br/>
+          </p>
+          <p class="submit">
+            <input type="submit" name="do" value="Submit" id="submit"/>
+          </p>
+          <div id="response"></div>
+        </form>
+      </div>
+      <!--end send-email-->
+      
+                    
+      <?php
+	      foreach($our_contacts as $our_contact):
+      ?>
+      <div class="delivery">
+        <div class="text-delivery">
+          <h3 class="title-three-4"><span>Lorem ipsum dolor sit amet</span></h3>
+          <p><?php echo $our_contact->desc_comment; ?></p>
+        </div>
+        <div class="perloc-delivery">
+          <div class="city"><img src="images/home_16x16_black.png" alt=""></div>
+          <p>N.Y. New York City, 91 E Broadway</p>
+          <div class="phone"><img src="images/iphone_12x16_black.png" alt=""></div>
+          <p><?php echo $our_contact->phone_comment; ?></p>
+          <div class="mail"><img src="images/mail_16x12_black.png" alt=""></div>
+          <p><?php echo $our_contact->email_comment; ?></p>
+        </div>
+      </div>
     </div>
-    <!-- End H1 Title -->
-    <!-- Start Main Body Wrap -->
-    <div id="main-wrap">
-        
-        <!-- Start Left Section -->
-        <div class="leftsection">
-
-            <!-- Start Google Maps -->
-        	<div class="blogwrapstart">
-            
-            	<div id="map_canvas">disini</div>
-                <span class="box-arrow"></span>
-            
-            </div>
-            <!-- End Google Maps -->
-        
-        </div>
-        <!-- End Left Section -->
-        
-        <!-- Start Right Section -->
-        <div class="rightsection">
-            
-        	<!-- Start Blog Widget -->
-            <div class="blogwidgetstart">
-            	<!-- Start Categories Widget -->
-            	<div class="widgettitle"><h4>Contact Details</h4></div>
-                
-                <div class="widgetbody">
-                
-                	<div class="blogcategories">
-                    
-                    	<div class="contactdetails">
-                    
-						<?php
-							foreach($our_contacts as $our_contact):
-						?>
-                            <p><?php echo $our_contact->email_comment; ?></p>
-                            <p><?php echo $our_contact->phone_comment; ?></p>
-                            <p><?php echo $our_contact->desc_comment; ?></p>
-						<?php
-							endforeach;
-						?>
-                            
-                        </div>
-                    
-                    </div>
-                
-              </div>
-              <!-- End Categories Widget -->
-              <span class="box-arrow"></span>
-            
-            </div>
-            <!-- End Blog Widget -->
-        
-        </div>
-        <!-- End Right Section -->
-        
-        <!-- Start Full Width -->
-        <div class="boxes-full">
-        
-            <div class="contacttitle">
-            
-                <h2>Contact <?php echo $_org; ?></h2>
-            
-            </div>
-        
-        	<div class="boxes-padding fullpadding">
-            
-            <div id="contactwarning"></div>
-            <div id="contactajax"></div>
-            
-            <form action="" method="post" name="ajaxcontactform" id="ajaxcontactform">
-            
-            	<div class="contacttextarea">
-                	<input name="id_content" type="hidden" value="0" />
-                
-                	<fieldset>
-                    	<textarea name="desc_comment" cols="5" rows="5" class="contacttextarea"><?php echo (set_value('desc_comment'))?set_value('desc_comment'):""; ?></textarea><br/>
-                    	<?php if(form_error('desc_comment') != null) echo "<span class=\"error-contact-textarea\"> " . form_error('desc_comment') . " </span>"; ?>
-					</fieldset>
-                
-                </div>
-                
-                <div class="contacttextboxes">
-                
-					<?php
-						if($this->session->userdata('is_login_front') == TRUE) {
-							echo "<input type=\"hidden\" name=\"author_comment\" value=\"" . $this->session->userdata('full_name_front') . "\"/>";
-							echo "<input type=\"hidden\" name=\"email_comment\" value=\"" . $this->session->userdata('email_front') . "\"/>";
-							echo "<input type=\"hidden\" name=\"id_user\" value=\"" . $this->session->userdata('id_user_front'). "\"/>";
-						}
-						else {
-					?>
-                	<fieldset>
-                    	<input name="author_comment" type="text" placeholder="Please Insert Your Name" class="contacttextform" value="<?php echo (set_value('author_comment'))?set_value('author_comment'):""; ?>">
-                    	<?php if(form_error('author_comment') != null) echo "<span class=\"error-contact\"> " . form_error('author_comment') . " </span>"; ?>
-					</fieldset>
-                    
-                	<fieldset>
-                    	<input name="email_comment" type="text" placeholder="Please Insert Your Email" class="contacttextform" value="<?php echo (set_value('email_comment'))?set_value('email_comment'):""; ?>">
-                    	<?php if(form_error('email_comment') != null) echo "<span class=\"error-contact\"> " . form_error('email_comment') . " </span>"; ?>
-					</fieldset>
-					<?php
-						}
-					?>
-                	<fieldset>
-                    	<input name="phone_comment" type="text" placeholder="Please Insert Your Phone" class="contacttextform" value="<?php echo (set_value('phone_comment'))?set_value('phone_comment'):""; ?>">
-                    	<?php if(form_error('phone_comment') != null) echo "<span class=\"error-contact\"> " . form_error('phone_comment') . " </span>"; ?>
-					</fieldset>
-                    
-                	<fieldset>
-                    	<input name="do" type="submit" class="contactformbutton" value="Send" style="cursor:pointer;">
-                    </fieldset>
-                
-                </div>
-                
-            </form>
-            
-            </div>
-            
-            <span class="box-arrow"></span>
-            
-        </div>
-        <!-- End Full Width -->
-        
-    </div>
-    <!-- End Main Body Wrap -->
-
-</div>
+    <?php
+	    endforeach;
+    ?>
+    <!--end content-send-->

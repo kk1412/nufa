@@ -1918,3 +1918,6 @@ a:hover {
 .gallery-image:hover {
 	border:5px solid rgb(134, 196, 63);
 }
+.help-inline {
+	color:red;
+}

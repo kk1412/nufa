@@ -753,6 +753,7 @@ class Front extends CI_Controller {
 		$data['events'] = $this->mdl_content->event_records(1)->result();
 		$data['aspirations'] = $this->mdl_comment->aspiration_records(1)->result();
 		$data['all_contents'] = $this->mdl_content->all_records(0,7)->result();
+		$data['diamondWords'] = $this->mdl_comment->diamondWord_records(1)->result();
 		$this->form_validation->set_rules('author_comment', 'Name', 'trim|required|min_length[5]|max_length[50]|xss_clean|');
 		$this->form_validation->set_rules('phone_comment', 'Name', 'trim|required|min_length[10]|max_length[20]|xss_clean|');
 		$this->form_validation->set_rules('email_comment', 'Email', 'trim|required|min_length[5]|max_length[50]|xss_clean|valid_email');
@@ -796,6 +797,7 @@ class Front extends CI_Controller {
 		$data['events'] = $this->mdl_content->event_records(1)->result();
 		$data['aspirations'] = $this->mdl_comment->aspiration_records(1)->result();
 		$data['all_contents'] = $this->mdl_content->all_records(0,7)->result();
+		$data['diamondWords'] = $this->mdl_comment->diamondWord_records(1)->result();
 		// update student
 		$id = $this->session->userdata("id_user_front");
 		$data['student_record'] = $this->mdl_student->record($id)->result();
@@ -842,6 +844,7 @@ class Front extends CI_Controller {
 		$data['events'] = $this->mdl_content->event_records(1)->result();
 		$data['aspirations'] = $this->mdl_comment->aspiration_records(1)->result();
 		$data['all_contents'] = $this->mdl_content->all_records(0,7)->result();
+		$data['diamondWords'] = $this->mdl_comment->diamondWord_records(1)->result();
 		// update student
 		$id = $this->session->userdata("id_user_front");
 		$data['student_record'] = $this->mdl_student->record($id)->result();
@@ -874,7 +877,7 @@ class Front extends CI_Controller {
 		$data['dir_uploads'] = $this->get_upload_path();
 		$data['_menu'] = $this->admin;
 		$data['_sub_menu'] = $this->content_management;
-		$data['_title'] = "Update Picture";
+		$data['_title'] = "Daftar Nilai Semester";
 		$data['_title_content'] = "Daftar " . $data['_title'];
 		$data['_org'] = "SMPIT Nurul Fajar";
 		$display = "studentSemester";
@@ -889,6 +892,7 @@ class Front extends CI_Controller {
 		$data['events'] = $this->mdl_content->event_records(1)->result();
 		$data['aspirations'] = $this->mdl_comment->aspiration_records(1)->result();
 		$data['all_contents'] = $this->mdl_content->all_records(0,7)->result();
+		$data['diamondWords'] = $this->mdl_comment->diamondWord_records(1)->result();
 		// update student
 		$id = $this->session->userdata("id_user_front");
 		$data['student_record'] = $this->mdl_student->record($id)->result();

@@ -2496,6 +2496,7 @@ class Admin extends CI_Controller {
 		$dataRecord['author_comment'] = $this->input->post("author_comment");
 		$dataRecord['email_comment'] = $this->input->post("email_comment");
 		$dataRecord['name_comment'] = $this->input->post("name_comment");
+		$dataRecord['desc_comment'] = $this->input->post("desc_comment");
 		$dataRecord['parent_comment'] = $this->input->post("parent_comment");
 		if($dataRecord['name_comment'] == null) $dataRecord['name_comment'] = "";
 		if($dataRecord['parent_comment'] == null) $dataRecord['parent_comment'] = "0";

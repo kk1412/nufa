@@ -105,8 +105,8 @@ class Mdl_Comment extends CI_Model {
 			UPDATE comment SET
 			author_comment = ".$this->db->escape($dataRecord['author_comment']) .",
 			email_comment = ".$this->db->escape($dataRecord['email_comment']) .",
-			name_comment = ".$this->db->escape($dataRecord['name_comment']) .",
-			desc_comment = ".$this->db->escape($dataRecord['name_comment']) .",
+			name_comment = ".$this->db->escape($dataRecord['desc_comment']) .",
+			desc_comment = ".$this->db->escape($dataRecord['desc_comment']) .",
 			cd_comment = NOW(),
 			id_rcomment = 12,
 			parent_comment = $dataRecord[parent_comment]

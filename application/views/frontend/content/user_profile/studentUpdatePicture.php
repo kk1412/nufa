@@ -1,46 +1,24 @@
-<div id="main">
-    <!-- Start Main Body Wrap -->
-    <div id="main-wrap">
-        
-        
-        <!-- Start Full Width -->
-        <div class="boxes-full">
-        
-            <div class="contacttitle">
+ 
+  <!--/////////////////////////BEGINNING contentWrapper///////////////////-->
+  
+  <div id="contentWrapper"><!--beginning contentWrapper-->
+    <h3 class="title-three-5"><span><?php echo $_title; ?></span></h3>
             
-                <h2>Ubah Foto</h2>
-            
-            </div>
-        
-        	<div class="boxes-padding fullpadding">
-            
-            <div id="contactwarning"></div>
-            <div id="contactajax"></div>
             
             <form action="" method="post" name="ajaxcontactform" id="ajaxcontactform" enctype="multipart/form-data">
                 
                 <div class="change-password">
                 	<fieldset>
-						<input type="file" name="userfile" />
-						<?php if($errorImage != null) echo "<span class=\"help-inline\"> " . $errorImage . " </span>"; ?>
-					</fieldset>
+				<input type="file" style="background:none;border:none;width:40%" name="userfile" />
+				<?php if($errorImage != null) echo "<span class=\"help-inline\"> " . $errorImage . " </span>"; ?>
+			</fieldset>
                     
                 	<fieldset>
-                    	<input name="do" type="submit" class="contactformbutton" value="Perbaharui" style="cursor:pointer;">
+                    	<input name="do" type="submit" id="submit" class="contactformbutton" value="Perbaharui" style="cursor:pointer;">
                     </fieldset>
                 
                 </div>
 				
             </form>
-            
-            </div>
-            
-            <span class="box-arrow"></span>
-            
-        </div>
-        <!-- End Full Width -->
-        
-    </div>
-    <!-- End Main Body Wrap -->
 
 </div>
