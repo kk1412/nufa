@@ -2153,7 +2153,7 @@ class Admin extends CI_Controller {
 		$data['id_picture'] = $this->uri->segment(5);
 		$dataRecord['id_picture'] = $this->uri->segment(5);
 		// create gallery
-		if(isset($_POST['doCreateGallery'])) {
+		if(isset($_POST['doCreate'])) {
 			$this->mdl_content->gallery_save($dataRecord);
 			redirect("admin/gallery");
 		}
@@ -2167,7 +2167,7 @@ class Admin extends CI_Controller {
 			if(isset($_POST['doUpdate'])) {
 				if($this->form_validation->run() == TRUE) {
 					$this->mdl_content->gallery_update($dataRecord);
-					redirect("admin/gallery");
+					//redirect("admin/gallery");
 				}
 			}
 		}
@@ -2187,7 +2187,7 @@ class Admin extends CI_Controller {
 				$dataRecord['name_picture'] = $dataUploads['file_name'];
 				if($data['errorImage'] == null) {
 					$this->mdl_picture->id_content_save($dataRecord);
-					redirect("admin/gallery/picture/$dataRecord[id_content]");
+					//redirect("admin/gallery/picture/$dataRecord[id_content]");
 				}
 			}
 		}

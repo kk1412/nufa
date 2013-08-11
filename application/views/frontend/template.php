@@ -61,6 +61,8 @@
 <!-- Desktop -->
 <link href="<?=$dir_css?>media-query-desktop.css" rel="stylesheet" type="text/css" media="only screen and (min-width:769px) and (max-width:960px)">
 <!--CSS noscript-->
+<link rel="stylesheet" href="<?=$dir_css?>picbox.css" type="text/css" media="screen" />
+<!--CSS picbox-->
 <noscript>
 <link rel="stylesheet" href="<?=$dir_css?>noscript.css" media="screen" />
 </noscript>
@@ -123,6 +125,7 @@
 <script type="text/javascript" src="<?=$dir_js?>jquery.prettyPhoto.js"></script><!--prettyPhoto-->
 <script type="text/javascript" src="<?=$dir_js?>script-prettyPhoto-one.js"></script><!--script-prettyPhoto-one--> 
 <script type="text/javascript" src="<?=$dir_js?>jquery.nivo.slider.js"></script><!--jquery.nivo.slider-->
+<script type="text/javascript" src="<?=$dir_js?>picbox.js"></script><!-- picbox -->
 <?php
 	if($this->uri->segment(2) != "index"){
 ?>

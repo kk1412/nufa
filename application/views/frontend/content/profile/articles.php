@@ -25,7 +25,7 @@
 				?>
 					<li>
 						<div class="photos-blog"><!--beginning photos-blog--> 
-							<?php echo anchor("$controller/$link/$article->id_content", '<span class="roll-img-blog"></span><img src="'. $dir_uploads.$article->picture_content .'" style="width:650px;height:300px;margin-bottom:20px;" alt="">'); ?>
+							<?php echo anchor("$controller/$link/$article->id_content", '<span class="roll-img-blog"></span><img src="'. $dir_uploads.$article->picture_content .'" style="width:650px;height:300px;margin-bottom:20px;border:10px solid" alt="">'); ?>
 							<div class="intro-text-blog"><!--beginning intro-text-blog-->
 							  
 							  <?php echo anchor("$controller/$link/$article->id_content", '<h3 class="title-three-4"><span>'.$article->name_content.' </span></h3>'); ?>

@@ -1903,3 +1903,18 @@ a:hover {
 	-o-transition-delay:0;
 	transition-delay:0;
 }
+.gallery {
+	width: 280px;
+	float: left;
+	padding: 1px;
+	margin: 0px 0px 0px 0px; 
+}
+.gallery-image {
+	border:5px solid rgba(0, 0, 0, 0.1);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
+.gallery-image:hover {
+	border:5px solid rgb(134, 196, 63);
+}
